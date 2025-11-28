@@ -42,7 +42,7 @@ echo "#define CMAES_EXPORT" > include/libcmaes/cmaes_export.h
 make
 
 # download and install the program
-git clone https://github.com/tsliwins/Neural-Driven-Constructive-Heuristic-for-FJSP-with-operation-types.git
+git clone https://github.com/Decision-Support-and-OR-Group/Neural-Driven-Constructive-Heuristic-for-FJSP-with-operation-types.git
 
 cd Neural-Driven-Constructive-Heuristic-for-FJSP-with-operation-types
 
@@ -117,4 +117,26 @@ Mode 4 Options (--test):
   --graphics                         Show graphics
   --time_limit arg (=60)             Time limit (s)
   --seed arg (=1)                    Random seed
+```
+### Examples
+The following workflow can be performed.
+
+1. Generate random synthetic training problems and save them into 'training-problems' directory.
+```
+./nd-ch-fjsp --generate --output_dir=training-problems --machines=10 --operation_types=15 --jobs_min=20 --jobs_max=30 --job_len_min=5 --job_len_max=10 --num_alt_min=1 --num_alt_max=3 --t_min=10 --t_max=100 --set_size=100000 --common_seed=7 --seed=5000
+```
+
+2. Train new network on generated problems. Save the network in the 'trained-network' directory.
+```
+./nd-ch-fjsp --train --files_dir=training-problems --output_dir=trained-network --val_set_size=10000 --max_evals=500000
+```
+
+3. Generate smaller set of test problems and save them into 'test-problems' directory. Important is, that most options, with exception to 'seed' (but also 'jobs_min' and 'jobs_max') are the same as in the training set, as those values describe unchanged factory setup.
+```
+./nd-ch-fjsp --generate --output_dir=test-problems --machines=10 --operation_types=15 --jobs_min=20 --jobs_max=30 --job_len_min=5 --job_len_max=10 --num_alt_min=1 --num_alt_max=3 --t_min=10 --t_max=100 --set_size=100 --common_seed=7 --seed=100000
+```
+
+4. Test the constructive heuristic with a trained network from the 'trained-network' directory on a set of test problems in the 'test-problems' directory. Store results in the 'test-results' directory.
+```
+./nd-ch-fjsp --test --output_dir=test-results --files_dir=test-problems --training_output_dir=trained-network --time_limit=100 --schedules --graphics
 ```
