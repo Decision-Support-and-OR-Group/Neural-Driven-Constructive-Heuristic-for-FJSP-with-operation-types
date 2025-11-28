@@ -55,7 +55,7 @@ cmake -DCMAKE_BUILD_TYPE=Release -G "Ninja" ..
 cmake --build .
 cd ..
 ```
-See the basic command line with:
+See the command line parameters with:
 ```bash
 ./nd-ch-fjsp --help
 ```
