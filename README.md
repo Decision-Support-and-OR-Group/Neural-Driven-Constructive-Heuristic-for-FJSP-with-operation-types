@@ -57,12 +57,16 @@ cmake -DCMAKE_BUILD_TYPE=Release -G "Ninja" ..
 cmake --build .
 cd ..
 ```
-See the command line parameters with:
+
+
+### Program usage
+Using the command:
 ```bash
 ./nd-ch-fjsp --help
 ```
 
-### Program usage
+one gets the following description of the basic program usage:
+
 ```
 Usage: ./nd-ch-fjsp [mode] [options]
 
