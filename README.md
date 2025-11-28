@@ -48,7 +48,7 @@ git clone https://github.com/Decision-Support-and-OR-Group/Neural-Driven-Constru
 
 cd Neural-Driven-Constructive-Heuristic-for-FJSP-with-operation-types
 
-# modify CMakeLists.txt to point to libcmaes directories
+# if needed, modify CMakeLists.txt to point to libcmaes directories
 
 mkdir build
 cd build
