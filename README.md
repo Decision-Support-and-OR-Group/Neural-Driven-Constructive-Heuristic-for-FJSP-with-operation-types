@@ -26,7 +26,9 @@ The program allows:
 
 ## Installation
 
-The program uses CMAES library, which is needed to be installed beforehand.
+The program uses CMAES library, which should be installed beforehand.
+
+The following installation was tested in Ubuntu 24.04.
 
 ```bash
 sudo apt-get install git build-essential autoconf automake make libtool libgoogle-glog-dev libgflags-dev libeigen3-dev ninja-build libeigen3-dev git gdb valgrind clang-tidy libboost-all-dev nlohmann-json3-dev libsfml-dev
