@@ -59,12 +59,12 @@ cd ..
 
 
 ### Program usage
-Using the command:
+Executing:
 ```bash
 ./nd-ch-fjsp --help
 ```
 
-one gets the following description of the basic program usage:
+results in the following description of the basic program usage:
 
 ```
 Usage: ./nd-ch-fjsp [mode] [options]
