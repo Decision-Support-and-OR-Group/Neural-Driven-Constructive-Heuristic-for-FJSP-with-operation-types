@@ -124,7 +124,7 @@ Mode 4 Options (--test):
   --seed arg (=1)                    Random seed
 ```
 ### Examples
-The following workflow can be performed.
+Typical workflow with the program looks as follows:
 
 1. Generate random synthetic training problems and save them into 'training-problems' directory.
 ```
