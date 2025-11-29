@@ -3,8 +3,7 @@
 Implementation of the algorithm described in the paper Kaleta,M. and Śliwiński, T.: "A neural-driven constructive heuristic for the flexible
 job shop scheduling problem: an efficient alternative to complex deep learning methods".
 
-This is a novel neural-driven constructive heuristic that replaces static priority dispatching rules with a compact, feed-forward neural network. The network evaluates potential operation-machine assign-
-ments during the schedule construction process based on features derived from the current partial schedule and job state. 
+This is a novel neural-driven constructive heuristic that replaces static priority dispatching rules with a compact, feed-forward neural network. The network evaluates potential operation-machine assignments during the schedule construction process based on features derived from the current partial schedule and job state. 
 
 The version of FJSP considered here, assumes the operations may be grouped into Operation Types, which denote collections of operations that share identical sets of eligible machines
 and corresponding processing times. Also, operations in a single job need to be of different Types. 
