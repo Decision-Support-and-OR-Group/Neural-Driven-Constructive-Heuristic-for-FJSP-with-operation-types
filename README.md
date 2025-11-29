@@ -141,7 +141,7 @@ Typical workflow with the program looks as follows:
 ./nd-ch-fjsp --generate --output_dir=test-problems --machines=10 --operation_types=15 --jobs_min=20 --jobs_max=30 --job_len_min=5 --job_len_max=10 --num_alt_min=1 --num_alt_max=3 --t_min=10 --t_max=100 --set_size=100 --common_seed=7 --seed=100000
 ```
 
-4. Test the constructive heuristic utilizing previously trained network in the 'trained-network' directory on a set of test problems saved in the 'test-problems' directory. Store results in the 'test-results' directory.
+4. Test the constructive heuristic utilizing previously trained network in the 'trained-network' directory on a set of test problems in the 'test-problems' directory. Store results in the 'test-results' directory.
 ```
 ./nd-ch-fjsp --test --output_dir=test-results --files_dir=test-problems --training_output_dir=trained-network --time_limit=100 --schedules --graphics
 ```
